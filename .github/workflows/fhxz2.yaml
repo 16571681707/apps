@@ -23,7 +23,7 @@ jobs:
           npm install got #tough-cookie
       - name: '运行 【fhxz】'
         run: |
-          node fhxz/fhxz.js
+          node fhxz/fhxz2.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           fhxzurl2: ${{ secrets.fhxzurl2 }}

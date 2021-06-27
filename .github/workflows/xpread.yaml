@@ -24,7 +24,7 @@ jobs:
       - name: '运行 【xpread】'
         #if: env.XL_HEADER
         run: |
-          node chlm/cglm.js
+          node xp/xpread.js
         env:
           xpreadcookie: ${{ secrets.xpreadcookie }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}

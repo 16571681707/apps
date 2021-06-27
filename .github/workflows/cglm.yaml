@@ -24,7 +24,7 @@ jobs:
       - name: '运行 【cglm】'
         #if: env.XL_HEADER
         run: |
-          node cglm/cglm.js
+          node chlm/cglm.js
         env:
           cglmheader: ${{ secrets.cglmheader }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}

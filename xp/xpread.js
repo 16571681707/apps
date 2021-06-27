@@ -42,7 +42,7 @@ http-request https://lrqd.wasair.com/advert/task/news/list script-path=https://r
 笑谱阅读 = type=http-request,pattern=https://lrqd.wasair.com/advert/task/news/list,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/xpread.js,script-update-interval=0
 */
 const $ = new Env('笑谱阅读')
-const notify = $.isNode() ?require('./sendNotify') : '';
+const notify = $.isNode() ?require('../sendNotify') : '';
 var newsaid;
 let status;
 status = (status = ($.getval("xpreadstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符

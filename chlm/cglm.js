@@ -20,8 +20,9 @@ if ($.isNode()) {
 //CK运行
 let isGetCookie = typeof $request !== 'undefined'
 if (isGetCookie) {
-   GetCookie();
-   $.done()
+   //GetCookie();
+   //$.done()
+   console.log("在这儿")
 } 
 
 cglmheaderArr.push(cglmheader)

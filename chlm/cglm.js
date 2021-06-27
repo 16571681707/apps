@@ -1,8 +1,8 @@
 const $ =  new Env('猜歌联萌')
-const notify = $.isNode() ?require('../sendNotify') : '';
+const notify = $.isNode() ?require('./sendNotify') : '';
 let status;
 let num = 21;
-status = (status = ($.getval("cglmstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
+status = (status = ("1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 cglmheaderArr = []
 let cglmheader = process.env.cglmheader
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
@@ -24,8 +24,8 @@ if (isGetCookie) {
    $.done()
 } 
 
-cglmheaderArr.push(process.env.cglmheader)
-    let cglmcount = (process.env.cglmcount || '1');
+cglmheaderArr.push(cglmheader)
+    let cglmcount = ('1');
   for (let i = 2; i <= cglmcount; i++) {
     cglmheaderArr.push($.getdata(`cglmheader${i}`))
   }
@@ -34,7 +34,7 @@ if (!cglmheaderArr[0]) {
     $.msg($.name, '【提示】请先获取猜歌联萌一cookie')
     return;
   }
-   console.log(`------------- 共${cglmheaderArr.length}账号----------------\n`)
+   console.log(`------------- 共1账号----------------\n`)
   for (let i = 0; i < cglmheaderArr.length; i++) {
     if (cglmheaderArr[i]) {
       message = ''

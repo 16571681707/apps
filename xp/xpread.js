@@ -49,7 +49,7 @@ status = (status = ($.getval("xpreadstatus") || "1") ) > 1 ? `${status}` : ""; /
 var delay = ($.getval("delay") || 30)
 var xpreadCookieArr = []
 var newslist = new Array();
-let xpreadCookie = process.env.xpreadCookie
+let xpreadCookie = process.env.xpreadcookie
 var xpreadtaskId = 15;
 var newscid = 11;
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
@@ -70,7 +70,7 @@ if (isGetCookie) {
    GetCookie();
    $.done()
 } 
-    xpreadCookieArr.push(process.env.xpreadCookie)
+    xpreadCookieArr.push(xpreadCookie)
     let xpreadcount = ($.getval('xpreadcount') || '1');
   for (let i = 2; i <= xpreadcount; i++) {
     xpreadCookieArr.push($.getdata(`xpreadCookie${i}`))

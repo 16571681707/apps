@@ -26,8 +26,8 @@ jobs:
         run: |
           node klcg/klcg.js
         env:
-          klcgurl: ${{ secrets.klcgurl }}
-          klcguhd: ${{ secrets.klcguhd }}
+          ygkcurl: ${{ secrets.ygkcurl }}
+          ygkchd: ${{ secrets.ygkchd }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
           BARK_SOUND: ${{ secrets.BARK_SOUND }}

@@ -25,8 +25,8 @@ status = (status = ($.getval("ygkcstatus") || "1") ) > 1 ? `${status}` : ""; // 
 const ygkcurlArr = [], ygkchdArr = [],ygkccount = ''
 let num = ($.getval('num') || 5) //循环体
 let times = Math.round(Date.now() / 1000)
-let ygkcurl = $.getdata('ygkcurl')
-let ygkchd = $.getdata('ygkchd')
+let ygkcurl = process.env.ygkcurl
+let ygkchd = process.env.ygkchd
 let ids,anawer,d,a;
 !(async () => {
   if (typeof $request !== "undefined") {

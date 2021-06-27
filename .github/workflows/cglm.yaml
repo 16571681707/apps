@@ -3,32 +3,30 @@ name: cglm
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/10 2-9 * * *'
+     - cron: '*/30 * * * *'
   watch:
-    types: started
+    types: book
+
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        cglmheader: ${{ secrets.cglmheader }}
-        #XL_HEADER: ${{ secrets.XL_HEADER }}
-        TZ: Asia/shanghai
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 10.x
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 12.x
       - name: npm install
         run: |
           npm install
+          npm install got #tough-cooki
       - name: '运行 【cglm】'
         #if: env.XL_HEADER
         run: |
           node cglm/cglm.js
         env:
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          cglmheader: ${{ secrets.cglmheader }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}

@@ -1,12 +1,12 @@
 const $ =  new Env('猜歌联萌')
-const notify = $.isNode() ?require('./sendNotify') : '';
+const notify = $.isNode() ?require('../sendNotify') : '';
 let status;
 let num = 21;
 status = (status = ($.getval("cglmstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 cglmheaderArr = []
-let cglmheader = $.getdata('cglmheader')
+let cglmheader = process.env.cglmheader
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
-const invite=1;//新用户自动邀请，0关闭，1默认开启
+const invite=0;//新用户自动邀请，0关闭，1默认开启
 const logs =0;//0为关闭日志，1为开启
 var hour=''
 var minute=''
@@ -24,8 +24,8 @@ if (isGetCookie) {
    $.done()
 } 
 
-cglmheaderArr.push($.getdata('cglmheader'))
-    let cglmcount = ($.getval('cglmcount') || '1');
+cglmheaderArr.push(process.env.cglmheader)
+    let cglmcount = (process.env.cglmcount || '1');
   for (let i = 2; i <= cglmcount; i++) {
     cglmheaderArr.push($.getdata(`cglmheader${i}`))
   }

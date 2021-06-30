@@ -52,7 +52,7 @@ jrtt = type=cron,cronexp="5,35 8-23 * * *",wake-system=1,script-path=https://raw
 */
 const jsname='今日头条极速版'
 const $ = Env(jsname)
-const notify = $.isNode() ?require('./sendNotify') : '';
+const notify = $.isNode() ?require('../sendNotify') : '';
 const signurlArr = [],signkeyArr=[]
 const farmurlArr = [],farmkeyArr=[]
 const readurlArr = [],readkeyArr=[]

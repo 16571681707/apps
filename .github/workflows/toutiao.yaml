@@ -3,7 +3,7 @@ name: toutiao
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/30 1-13 * * *'
+     - cron: '*/30 1-18 * * *'
   watch:
     types: book
 

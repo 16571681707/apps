@@ -1,4 +1,4 @@
-name: didi
+name: didi_drink
 
 on:
   workflow_dispatch:

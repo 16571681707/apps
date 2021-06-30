@@ -24,7 +24,7 @@ jobs:
       - name: '运行 【cglm】'
         #if: env.XL_HEADER
         run: |
-          node didi/didi.js
+          node didi/didi_drink.js
         env:
           didi: ${{ secrets.didi }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}

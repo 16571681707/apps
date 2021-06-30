@@ -21,7 +21,7 @@ jobs:
         run: |
           npm install
           npm install got #tough-cooki
-      - name: '运行 【cglm】'
+      - name: '运行 【didi_drink】'
         #if: env.XL_HEADER
         run: |
           node didi/didi_drink.js

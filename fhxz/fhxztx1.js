@@ -34,12 +34,12 @@ var myRequest = {
     body: body
 };
 
-fetch(myRequest).then(response => {
+fetch(myRequest).then(res => {
 
 
 
     //console.log(response.statusCode + "\n\n" + response.body);
-var result = JSON.parse(response.body)
+var result = JSON.parse(res.body)
 itermid = result[0].data.marketItemList[0].itemDefId
 console.log(itermid)
 const url1 = fhxzid1 +`&msgtype=market_exchange`

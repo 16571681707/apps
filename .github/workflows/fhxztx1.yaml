@@ -1,4 +1,4 @@
-name: fhxz0.3(1)
+name: fhxztx1
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
           npm install got #tough-cookie
       - name: '运行 【fhxz0.3】'
         run: |
-          node fhxz/0.3tx(1).js
+          node fhxz/fhxztx1.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           FHXZID1: ${{ secrets.fhxzid }}

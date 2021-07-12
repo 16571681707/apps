@@ -11,7 +11,7 @@ let itermid = 10
  * 
  */
 let fhxzid1 = ``
-fhxzid1 = process.env.fhxzid1
+fhxzid1 = process.env.FHXZID1
 var url = fhxzid1 +`&msgtype=market_getItemList`;
 console.log(url)
 var method = `POST`;

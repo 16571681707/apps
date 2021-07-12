@@ -1,3 +1,7 @@
+
+npm install node-fetch
+
+const fetch = require('node-fetch')
 let itermid = 10
 
 

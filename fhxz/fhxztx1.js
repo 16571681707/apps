@@ -10,8 +10,8 @@ let itermid = 10
  * @fileoverview Template to compose HTTP reqeuest.
  * 
  */
-let fhxzid1 = ``
-fhxzid1 = process.env.FHXZID1
+let fhxzid1 = `https://sunnytown.hyskgame.com/api/messages?accessToken=165763_1625926423_424e1930b80b52f66058e5af23baabdf`
+//fhxzid1 = process.env.FHXZID1
 var url = fhxzid1 +`&msgtype=market_getItemList`;
 console.log(url)
 var method = `POST`;

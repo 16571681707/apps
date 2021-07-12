@@ -10,7 +10,7 @@ let itermid = 10
  * @fileoverview Template to compose HTTP reqeuest.
  * 
  */
-var fhxzid1 = process.env.fhxzid1
+let fhxzid1 = process.env.fhxzid1
 var url = fhxzid1 +`&msgtype=market_getItemList`;
 var method = `POST`;
 var headers = {

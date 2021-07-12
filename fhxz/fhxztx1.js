@@ -10,8 +10,8 @@ let itermid = 10
  * @fileoverview Template to compose HTTP reqeuest.
  * 
  */
-var fhxzid = process.env.fhxzid1
-var url = fhxzid +`&msgtype=market_getItemList`;
+var fhxzid1 = process.env.fhxzid1
+var url = fhxzid1 +`&msgtype=market_getItemList`;
 var method = `POST`;
 var headers = {
 'Accept' : `*/*`,
@@ -40,7 +40,7 @@ fetch(myRequest).then(response => {
 var result = JSON.parse(response.body)
 itermid = result[0].data.marketItemList[0].itemDefId
 console.log(itermid)
-const url1 = fhxzid +`&msgtype=market_exchange`;
+const url1 = fhxzid1 +`&msgtype=market_exchange`;
 const method1 = `POST`;
 const headers1 = {
 'Accept' : `*/*`,

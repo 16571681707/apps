@@ -28,7 +28,7 @@ var myRequest = {
     body: body
 };
 
-$task.fetch(myRequest).then(response => {
+fetch(myRequest).then(response => {
 
 
 
@@ -57,7 +57,7 @@ const myRequest1 = {
     body: body1
 };
 
-$task.fetch(myRequest1).then(response => {
+fetch(myRequest1).then(response => {
     console.log(response.statusCode + "\n\n" + response.body);
 console.log("-----" + itermid)
     $done();

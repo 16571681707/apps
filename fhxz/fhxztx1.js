@@ -12,6 +12,7 @@ let itermid = 10
  */
 let fhxzid1 = process.env.fhxzid1
 var url = fhxzid1 +`&msgtype=market_getItemList`;
+console.log(url)
 var method = `POST`;
 var headers = {
 'Accept' : `*/*`,

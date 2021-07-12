@@ -41,7 +41,7 @@ fetch(myRequest)
     console.log(result + "-------")
     itermid = result[0].data.marketItemList[0].itemDefId
     console.log(itermid)
-})
+
 
     
     

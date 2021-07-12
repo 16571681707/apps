@@ -42,7 +42,8 @@ fetch(myRequest).then(response => {
 var result = JSON.parse(response.body)
 itermid = result[0].data.marketItemList[0].itemDefId
 console.log(itermid)
-const url1 = fhxzid1 +`&msgtype=market_exchange`;
+const url1 = fhxzid1 +`&msgtype=market_exchange`
+console.log(url1)
 const method1 = `POST`;
 const headers1 = {
 'Accept' : `*/*`,

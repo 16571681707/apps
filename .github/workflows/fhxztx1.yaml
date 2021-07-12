@@ -21,6 +21,7 @@ jobs:
         run: |
           npm install
           npm install got #tough-cookie
+          npm install node-fetch
       - name: '运行 【fhxz0.3】'
         run: |
           node fhxz/fhxztx1.js

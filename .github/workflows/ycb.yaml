@@ -27,7 +27,7 @@ jobs:
           node ycb/ycbcollect.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          fhxzurl: ${{ secrets.fhxzurl }}
+          YCB_COLLECT: ${{ secrets.YCB_COLLECT }}
           fhxzhd: ${{ secrets.fhxzhd }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}

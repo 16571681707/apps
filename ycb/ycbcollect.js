@@ -2,10 +2,10 @@ var fetch = require('node-fetch');
 
 const url = "http://api.yongchenbao.com/api/Member/getCoin";
 const method = "POST";
-const headers = process.env.YCB_COLLECT;
+const YCB_COLLECT = process.env.YCB_COLLECT;
 const myurl = {
     method: "POST",
-    headers: headers,
+    headers: YCB_COLLECT,
 }
 fetch(url,myurl)
     .then(res => res.json())

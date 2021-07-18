@@ -1,4 +1,4 @@
-name: ycb
+name: ycb_save
 
 on:
   workflow_dispatch:

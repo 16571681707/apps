@@ -3,7 +3,7 @@ name: jckd_cj_fridayon
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/15 9-16 * * *'
+     - cron: '*/15 1-12 * * *'
   watch:
     types: book
 

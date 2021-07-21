@@ -24,7 +24,7 @@ jobs:
           npm install node-fetch
       - name: '运行 【jckd_cj】'
         run: |
-          node jckd/jckdcj_fridayon.js
+          node jckd/jckd_fridayon_cj.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           ycbtxbody: ${{ secrets.ycbtxbody }}

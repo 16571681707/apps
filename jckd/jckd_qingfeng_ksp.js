@@ -1,0 +1,55 @@
+var fetch = require('node-fetch');
+var goon = 1
+test()  //抽奖5次
+
+async function test(){for(var i = 1; i < 6; i++){
+    console.log("开始第"+i+"次看视频：")
+    ksp()
+    console.log("等待12s")
+    await sleep(12000)
+    if(goon == 2){
+        break
+    }
+    console.log("\n")
+}}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+function ksp(){
+
+ 
+const url = "https://ant.xunsl.com/v17/Rvideo/videoCallback.json";
+var method = `POST`;
+var headers = {
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3MiOiJXSUZJIiwiYWN0aW9uIjoicmlnaHRfY29ybmVyX3ZpZGVvIiwiYXBwLXZlcnNpb24iOiI4LjEuMiIsImFwcF9uYW1lIjoienFrZF9hcHAiLCJhcHBfdmVyc2lvbiI6IjguMS4yIiwiY2hhbm5lbCI6ImMxMDI1IiwiZGV2aWNlX2JyYW5kIjoidml2byIsImRldmljZV9pZCI6IjUxNjQ3OTQwIiwiZGV2aWNlX21vZGVsIjoidml2bytZNjZpK0EiLCJkZXZpY2VfcGxhdGZvcm0iOiJhbmRyb2lkIiwiZGV2aWNlX3R5cGUiOiJhbmRyb2lkIiwiZHBpIjoiMzIwIiwiaW5uZXJfdmVyc2lvbiI6IjIwMjEwNzE5MTcwMiIsImxhbmd1YWdlIjoiemgtQ04iLCJtZW1vcnkiOiIyIiwibWkiOiIwIiwibW9iaWxlX3R5cGUiOiIxIiwibmV0X3R5cGUiOiIxIiwibmV0d29ya190eXBlIjoiV0lGSSIsIm9wZW51ZGlkIjoiOTY2NjY3NmI5Nzk2ZmZmIiwib3NfYXBpIjoiMjUiLCJvc192ZXJzaW9uIjoiTjJHNDdIK3JlbGVhc2Uta2V5cyIsInJlcXVlc3RfdGltZSI6IjE2MjY4NjM3NzkiLCJyZXNvbHV0aW9uIjoiNzIweDEyODAiLCJyb21fdmVyc2lvbiI6Ik4yRzQ3SCtyZWxlYXNlLWtleXMiLCJzX2FkIjoiak1JcjBMM0NXWEtJJTNEMzN3Wng3ME5UeUk4cFJjNTREZXNCZyUzRCUzRCIsInNfaW0iOiI1MUhILWZuMDgzSW8lM0RBLXd3dmxPZnNnYUl4cTAxZUs1ejhRJTNEJTNEIiwic2ltIjoiMiIsInNtX2RldmljZV9pZCI6IjIwMjEwNjA2MTMyODU5YjFkOGFhZmJiNTE3N2RkYzhkZGRmYjQ0ZDAzZGVhZWMwMTA5ZWRhYjExYzFkMTAxIiwic3RvcmFnZSI6IjIyLjk1Iiwic3VidiI6IjEuMi4yIiwidWlkIjoiNTQ4NjU5NjYiLCJ2ZXJzaW9uX2NvZGUiOiI4MDAiLCJ6cWtleSI6Ik1EQXdNREF3TURBd01KQ01wTi13MDlXdGc1LUJiMzZlaDZDUHFIdWFsSWVqbDY5MXkyU3h0NTlyaGFLcDRMRFB5R2w5b25xa2ozWnFZSmE4WTg5OG5haldzSnVwWkxETmpXMkZvb0tacnJtNmFwcUdjWFkiLCJ6cWtleV9pZCI6IjkyYzBlYzM0M2U1YzVkM2IzNWI3OTg4NDgwMTg4MjA0In0.HlRD1odFYN243n0H0DloUCh0WjPPachP9G_IwATuqAEZrfBwNXSRXwBAjKdQChkKOiXaLeemxdWsstnfUbEo5w",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Content-Length": "2333",
+    "Host": "ant.xunsl.com",
+    "Connection": "Keep-Alive",
+    "Accept-Encoding": "gzip",
+    "User-Agent": "okhttp/3.12.2"
+};
+var body = "access=WIFI&action=right_corner_video&app-version=8.1.2&app_name=zqkd_app&app_version=8.1.2&channel=c1025&device_brand=HONOR&device_id=51647901&device_model=DUA-TL00&device_platform=android&device_type=android&dpi=360&inner_version=202107191702&language=zh-CN&memory=1&mi=0&mobile_type=1&net_type=1&network_type=WIFI&openudid=6ab0e082ed653779&os_api=27&os_version=DUA-TL00%201.0.0.184%28C01%29&request_time=1626862321&resolution=720x1356&rom_version=DUA-TL00%201.0.0.184%28C01%29&s_ad=e6NplMcA3HQU%3DhtvPTSd_9xgtT-dnR367e3H7Ikcdv4Ga2&sim=2&sm_device_id=202107211724221f133be548668534609d224904018977011850bb09f25f78&storage=11.18&subv=1.2.2&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3MiOiJXSUZJIiwiYWN0aW9uIjoicmlnaHRfY29ybmVyX3ZpZGVvIiwiYXBwLXZlcnNpb24iOiI4LjEuMiIsImFwcF9uYW1lIjoienFrZF9hcHAiLCJhcHBfdmVyc2lvbiI6IjguMS4yIiwiY2hhbm5lbCI6ImMxMDI1IiwiZGV2aWNlX2JyYW5kIjoiSE9OT1IiLCJkZXZpY2VfaWQiOiI1MTY0NzkwMSIsImRldmljZV9tb2RlbCI6IkRVQS1UTDAwIiwiZGV2aWNlX3BsYXRmb3JtIjoiYW5kcm9pZCIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRwaSI6IjM2MCIsImlubmVyX3ZlcnNpb24iOiIyMDIxMDcxOTE3MDIiLCJsYW5ndWFnZSI6InpoLUNOIiwibWVtb3J5IjoiMSIsIm1pIjoiMCIsIm1vYmlsZV90eXBlIjoiMSIsIm5ldF90eXBlIjoiMSIsIm5ldHdvcmtfdHlwZSI6IldJRkkiLCJvcGVudWRpZCI6IjZhYjBlMDgyZWQ2NTM3NzkiLCJvc19hcGkiOiIyNyIsIm9zX3ZlcnNpb24iOiJEVUEtVEwwMCsxLjAuMC4xODQlMjhDMDElMjkiLCJyZXF1ZXN0X3RpbWUiOiIxNjI2ODYyMzIxIiwicmVzb2x1dGlvbiI6IjcyMHgxMzU2Iiwicm9tX3ZlcnNpb24iOiJEVUEtVEwwMCsxLjAuMC4xODQlMjhDMDElMjkiLCJzX2FkIjoiZTZOcGxNY0EzSFFVJTNEaHR2UFRTZF85eGd0VC1kblIzNjdlM0g3SWtjZHY0R2EyIiwic2ltIjoiMiIsInNtX2RldmljZV9pZCI6IjIwMjEwNzIxMTcyNDIyMWYxMzNiZTU0ODY2ODUzNDYwOWQyMjQ5MDQwMTg5NzcwMTE4NTBiYjA5ZjI1Zjc4Iiwic3RvcmFnZSI6IjExLjE4Iiwic3VidiI6IjEuMi4yIiwidWlkIjoiNTQ4NjU5MjYiLCJ2ZXJzaW9uX2NvZGUiOiI4MDAiLCJ6cWtleSI6Ik1EQXdNREF3TURBd01KQ01wTi13MDlXdGc1LUJiMzZlaDZDUHFIdWFsSWVqbDY5MXkyU3h0NS15aGFLcDRMRFB5R2w5b25xa2ozWnFZSmE4WTg5OG5haldzSnVwWkxETmpXMkZvbmJlcjZtbWFwcUdjWFkiLCJ6cWtleV9pZCI6ImEwZDZiOTI5M2NiYWQxNTZiYzhhNmZkYjYzNGRlYzI3In0.242eZbApx5YD-XldC_8s3P1Py1tEOQiQTHaNU-uaRE-f1R6liU-5F0fxoHWlq0HPeqZMrgoQdmybIh1JVs0Lkw&uid=54865926&version_code=800&zqkey=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualIejl691y2Sxt5-yhaKp4LDPyGl9onqkj3ZqYJa8Y898najWsJupZLDNjW2Fonber6mmapqGcXY&zqkey_id=a0d6b9293cbad156bc8a6fdb634dec27access=WIFI&action=right_corner_video&app-version=8.1.2&app_name=zqkd_app&app_version=8.1.2&channel=c1025&device_brand=vivo&device_id=51647940&device_model=vivo%20Y66i%20A&device_platform=android&device_type=android&dpi=320&inner_version=202107191702&language=zh-CN&memory=2&mi=0&mobile_type=1&net_type=1&network_type=WIFI&openudid=9666676b9796fff&os_api=25&os_version=N2G47H%20release-keys&request_time=1626863779&resolution=720x1280&rom_version=N2G47H%20release-keys&s_ad=jMIr0L3CWXKI%3D33wZx70NTyI8pRc54DesBg%3D%3D&s_im=51HH-fn083Io%3DA-wwvlOfsgaIxq01eK5z8Q%3D%3D&sim=2&sm_device_id=20210606132859b1d8aafbb5177ddc8dddfb44d03deaec0109edab11c1d101&storage=22.95&subv=1.2.2&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhY2Nlc3MiOiJXSUZJIiwiYWN0aW9uIjoicmlnaHRfY29ybmVyX3ZpZGVvIiwiYXBwLXZlcnNpb24iOiI4LjEuMiIsImFwcF9uYW1lIjoienFrZF9hcHAiLCJhcHBfdmVyc2lvbiI6IjguMS4yIiwiY2hhbm5lbCI6ImMxMDI1IiwiZGV2aWNlX2JyYW5kIjoidml2byIsImRldmljZV9pZCI6IjUxNjQ3OTQwIiwiZGV2aWNlX21vZGVsIjoidml2bytZNjZpK0EiLCJkZXZpY2VfcGxhdGZvcm0iOiJhbmRyb2lkIiwiZGV2aWNlX3R5cGUiOiJhbmRyb2lkIiwiZHBpIjoiMzIwIiwiaW5uZXJfdmVyc2lvbiI6IjIwMjEwNzE5MTcwMiIsImxhbmd1YWdlIjoiemgtQ04iLCJtZW1vcnkiOiIyIiwibWkiOiIwIiwibW9iaWxlX3R5cGUiOiIxIiwibmV0X3R5cGUiOiIxIiwibmV0d29ya190eXBlIjoiV0lGSSIsIm9wZW51ZGlkIjoiOTY2NjY3NmI5Nzk2ZmZmIiwib3NfYXBpIjoiMjUiLCJvc192ZXJzaW9uIjoiTjJHNDdIK3JlbGVhc2Uta2V5cyIsInJlcXVlc3RfdGltZSI6IjE2MjY4NjM3NzkiLCJyZXNvbHV0aW9uIjoiNzIweDEyODAiLCJyb21fdmVyc2lvbiI6Ik4yRzQ3SCtyZWxlYXNlLWtleXMiLCJzX2FkIjoiak1JcjBMM0NXWEtJJTNEMzN3Wng3ME5UeUk4cFJjNTREZXNCZyUzRCUzRCIsInNfaW0iOiI1MUhILWZuMDgzSW8lM0RBLXd3dmxPZnNnYUl4cTAxZUs1ejhRJTNEJTNEIiwic2ltIjoiMiIsInNtX2RldmljZV9pZCI6IjIwMjEwNjA2MTMyODU5YjFkOGFhZmJiNTE3N2RkYzhkZGRmYjQ0ZDAzZGVhZWMwMTA5ZWRhYjExYzFkMTAxIiwic3RvcmFnZSI6IjIyLjk1Iiwic3VidiI6IjEuMi4yIiwidWlkIjoiNTQ4NjU5NjYiLCJ2ZXJzaW9uX2NvZGUiOiI4MDAiLCJ6cWtleSI6Ik1EQXdNREF3TURBd01KQ01wTi13MDlXdGc1LUJiMzZlaDZDUHFIdWFsSWVqbDY5MXkyU3h0NTlyaGFLcDRMRFB5R2w5b25xa2ozWnFZSmE4WTg5OG5haldzSnVwWkxETmpXMkZvb0tacnJtNmFwcUdjWFkiLCJ6cWtleV9pZCI6IjkyYzBlYzM0M2U1YzVkM2IzNWI3OTg4NDgwMTg4MjA0In0.HlRD1odFYN243n0H0DloUCh0WjPPachP9G_IwATuqAEZrfBwNXSRXwBAjKdQChkKOiXaLeemxdWsstnfUbEo5w&uid=54865966&version_code=800&zqkey=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualIejl691y2Sxt59rhaKp4LDPyGl9onqkj3ZqYJa8Y898najWsJupZLDNjW2FooKZrrm6apqGcXY&zqkey_id=92c0ec343e5c5d3b35b7988480188204";
+
+var myurl = {
+    method: method,
+    headers: headers,
+    body: body
+};
+
+fetch(url,myurl).then(res=>{
+
+    return res.json()    //这里可以是json，也可以是字符串
+    
+    }).then(json =>{
+        if(json.message != "执行成功"){
+            console.log(json.message)
+            goon = 2
+        } else {
+            console.log("看视频得分："+json.items.dialog.score )
+        }
+
+    })
+}
+

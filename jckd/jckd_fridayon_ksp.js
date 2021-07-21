@@ -7,7 +7,7 @@ async function test(){for(var i = 1; i < 12; i++){
     ksp()
   console.log("等待12s")
     await sleep(12000)
-    if(goon = 2){
+    if(goon == 2){
         break
     }
     console.log("\n")

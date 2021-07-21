@@ -2,27 +2,25 @@
 var fetch = require('node-fetch');
 
 
-var scores = 0
+test()  //抽奖5次
 
-var jiabeiscore = 0
-var num = 1
-for(var i = 1 ; i < 5; i ++){
-    setTimeout(function(){
-        console.log("第"+ num + "次抽奖结果:")
-        choujiang()
-        num = num+ 1
-        if(scores != 0){
-            jiabei()
-        }
-    },10000*i + 800)
-}
+async function test(){for(var i = 1; i < 6; i++){
+    console.log("开始第"+i+"次抽奖：")
+    cj()
+    await sleep(3000)
+    console.log("\n")
+}}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
 
 
 
 
 
 
-function choujiang(){
+
+function cj(){
 
     const url1 = `https://ant.xunsl.com/WebApi/RotaryTable/turnRotary?_\u003d1626701252457`;
     const method1 = `POST`;
@@ -55,12 +53,15 @@ function choujiang(){
         return res.json()    //这里可以是json，也可以是字符串
         
         }).then(json =>{
-        // console.log(json)
-        scores = json.data.score
-        console.log("抽奖得分:" + scores + "\n")
+       if(json.data.score != 0){
+            console.log("抽奖得分：" + json.data.score)
+            cjjb()
+        } else {
+            console.log("未抽中" )
+        }
         })
 }
-function jiabei(){
+function cjjb(){
     const url1 = `https://ant.xunsl.com/v5/RotaryTable/toTurnDouble.json`;
     const method1 = `POST`;
     const headers1 = {
@@ -93,9 +94,11 @@ function jiabei(){
         return res.json()    //这里可以是json，也可以是字符串
         
         }).then(json =>{
-        // console.log(json)
-        jiabeiscore = json.items.score 
-        console.log("加倍分数为：" + jiabeiscore)
+        if(json.items.score != null){
+            console.log("加倍成功,分数：" + json.items.score)
+        } else {
+            console.log("加倍次数耗尽")
+        }
         })
 }
     

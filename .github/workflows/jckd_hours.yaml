@@ -3,7 +3,7 @@ name: jckd_hours
 on:
   workflow_dispatch:
   schedule:
-     - cron: '* */1 * * *'
+     - cron: '25 3-23/1 * * *'
   watch:
     types: book
 

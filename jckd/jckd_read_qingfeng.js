@@ -9,16 +9,16 @@ let s = 30000 //等待延迟30s
 const $ = new Env("中青看点")
 //const notify = $.isNode() ? require('./sendNotify') : '';
 let ReadArr = [], YouthBody = "",readscore = 0;
-  if (process.env.JC_READ_QINGFENG && process.env.JC_READ_QINGFENG.indexOf('&') > -1) {
+//   if (process.env.JC_READ_QINGFENG && process.env.JC_READ_QINGFENG.indexOf('&') > -1) {
   YouthBody = process.env.JC_READ_QINGFENG.split('&');
-  console.log(`您选择的是用"&"隔开\n`)
-  }
-  else if (process.env.JC_READ_QINGFENG&& process.env.JC_READ_QINGFENG.indexOf('\n') > -1) {
-  YouthBody = process.env.JC_READ_QINGFENG.split('\n');
-  console.log(`您选择的是用换行隔开\n`)
-  } else {
-  YouthBody = process.env.JC_READ_QINGFENG.split()
-  }
+//   console.log(`您选择的是用"&"隔开\n`)
+//   }
+//   else if (process.env.JC_READ_QINGFENG&& process.env.JC_READ_QINGFENG.indexOf('\n') > -1) {
+//   YouthBody = process.env.JC_READ_QINGFENG.split('\n');
+//   console.log(`您选择的是用换行隔开\n`)
+//   } else {
+//   YouthBody = process.env.JC_READ_QINGFENG.split()
+//   }
   Object.keys(YouthBody).forEach((item) => {
         if (YouthBody[item]) {
           ReadArr.push(YouthBody[item])

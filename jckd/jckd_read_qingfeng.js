@@ -52,7 +52,16 @@ function AutoRead() {
        let url = {
             url: `https://ant.xunsl.com/v5/article/complete.json`,
             headers: {
-            'User-Agent': 'KDApp/1.7.8 (iPhone; iOS 14.0; Scale/3.00)'
+            "device-platform": "android",
+            "access": "WIFI",
+            "os-version": "N2G47H+release-keys",
+            "app-version": "8.1.2",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Length": "1101",
+            "Host": "ant.xunsl.com",
+            "Connection": "Keep-Alive",
+            "Accept-Encoding": "gzip",
+            "User-Agent": "okhttp/3.12.2"
             },
             body: articlebody
         };

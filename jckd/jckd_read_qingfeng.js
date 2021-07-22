@@ -13,8 +13,8 @@ let ReadArr = [], YouthBody = "",readscore = 0;
   YouthBody = process.env.JC_READ_QINGFENG.split('&');
   console.log(`您选择的是用"&"隔开\n`)
   }
-  else if (process.env.YOUTH_READ && process.env.YOUTH_READ.indexOf('\n') > -1) {
-  YouthBody = process.env.YOUTH_READ.split('\n');
+  else if (process.env.JC_READ_QINGFENG&& process.env.JC_READ_QINGFENG.indexOf('\n') > -1) {
+  YouthBody = process.env.JC_READ_QINGFENG.split('\n');
   console.log(`您选择的是用换行隔开\n`)
   } else {
   YouthBody = process.env.JC_READ_QINGFENG.split()

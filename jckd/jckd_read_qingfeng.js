@@ -10,7 +10,7 @@ const $ = new Env("中青看点")
 //const notify = $.isNode() ? require('./sendNotify') : '';
 let ReadArr = [], YouthBody = "",readscore = 0;
   if (process.env.JC_READ_QINGFENG && process.env.JC_READ_QINGFENG.indexOf('&') > -1) {
-  YouthBody = process.env.JC_READ_QINGFENG.split('&');
+  YouthBody = process.env.JC_READ_QINGFENG.toString().split('&');
   console.log(`您选择的是用"&"隔开\n`)
   }
   else if (process.env.JC_READ_QINGFENG&& process.env.JC_READ_QINGFENG.indexOf('\n') > -1) {

@@ -9,7 +9,7 @@ let s = 30000 //等待延迟30s
 const $ = new Env("中青看点")
 //const notify = $.isNode() ? require('./sendNotify') : '';
 let ReadArr = [], YouthBody = "",readscore = 0;
-  if (process.env.JC_READ_QINGFENG && process.env.YOUTH_READ.indexOf('&') > -1) {
+  if (process.env.JC_READ_QINGFENG && process.env.JC_READ_QINGFENG.indexOf('&') > -1) {
   YouthBody = process.env.JC_READ_QINGFENG.split('&');
   console.log(`您选择的是用"&"隔开\n`)
   }

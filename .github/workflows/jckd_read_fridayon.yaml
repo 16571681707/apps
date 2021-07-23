@@ -1,0 +1,38 @@
+name: jckd_read_fridayon
+
+
+
+on:
+  workflow_dispatch:
+  # 账号越多文章越多，运行一次消耗的时间也越长，文章和视频不要一块运行，cron自己看着写
+  schedule:
+     - cron: '1 3 * * *'
+  watch:
+    types: started
+jobs:
+  build:
+    env:
+      YOUTH_READ: ${{ secrets.JC_READ_QINGFENG  }}
+      YOUTH_READ2: ${{ secrets.YOUTH_READ2 }}
+      YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
+      YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
+      YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: npm install
+        run: |
+          npm install
+                 
+      - name: '运行 【中青看点账号1-文章阅读1-54篇】'
+        if: env.YOUTH_READ         
+        run: |
+          node jckd/jckd_read_fridayon.js
+        env:
+          YOUTH_READ: ${{ secrets.JC_READ_QINGFENG  }}

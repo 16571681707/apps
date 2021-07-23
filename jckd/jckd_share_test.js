@@ -12,7 +12,7 @@ let headers = {
     "Accept-Encoding": "gzip, deflate, br",
     "Accept": "*/*",
     "Connection": "keep-alive",
-    "Referer": "https://my.allcitysz.net",
+    "Referer": "https://ant.xunsl.com",
     "Host": "script.xunsl.com",
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.2(0x18000231) NetType/WIFI Language/zh_CN",
     "Accept-Language": "zh-cn"

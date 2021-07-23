@@ -3,8 +3,9 @@ let md5 = require('md5-node');
 let nowTime;
 let wxck;
 let articles = [
-"https://my.allcitysz.net/html/article/index.html?uid=54861911&wap_signature=EgVbkQOLMqvWm9RrG0a2yA6DVcE0zRv73xy6doZeXBJzln85PD&si=c5658b18425fb7300bdf3b192c8fea39&t=1627028071950"];
-let articles1 = [];
+"https://ant.xunsl.com/v2/comment/lists/get.json?article_id=32942932&isnew=1&app_name=zqkd_app&app_version=8.1.1&carrier=%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8&channel=c1005&channel_code=c1005&client_version=8.1.1&device_brand=OPPO&device_id=51643807&device_model=PCAM10&device_platform=android&device_type=2&dpi=480&inner_version=202107151939&language=zh-CN&memory=3&mi=0&mobile_type=1&net_type=1&network_type=WIFI&oaid=1CF53215846842DC862E6ED6D54FA24Bee79c064503e704efaf511a1a9014ed8&openudid=8e1c32754bfc4ef8&os_api=29&os_version=PCAM10_11_C.16&phone_code=8e1c32754bfc4ef8&phone_network=WIFI&phone_sim=1&request_time=1627028024&resolution=1080x2264&rom_version=PCAM10_11_C.16&s_ad=PWRHEiWXZdUk%3DuVKRWmxnb-e9cN48-Is-0r0a8is6QCG-&sm_device_id=20210213203836663c3df68cecbe244aeb26de607df2c101996432d57c323b&storage=107.53&uid=54861911&uuid=431f334f01b84c45baa74b9394334c17&version_code=800&zqkey=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualIejl691y2Swt5-xhIyp4LDPyGl9onqkj3ZqYJa8Y898najWsJupZLDNjW6FsnqWrt_EapqGcXY&zqkey_id=3c28f402c3872638c1fd415f911f9c25&sign=32acf75d79518ee8dec24361c38c6ed3"]
+
+	let articles1 = [];
 let encodearticles;
 
 

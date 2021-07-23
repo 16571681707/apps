@@ -24,6 +24,6 @@ jobs:
                   npm install
             - name: "运行 【中青分享】"
               run: |
-                  node jckd/jckd_share.js
+                  node jckd/jckd_share_test.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}

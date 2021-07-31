@@ -1,5 +1,5 @@
 
-#day by day
+//day by day
 
 var fetch = require('node-fetch');
 var hongbao = 0

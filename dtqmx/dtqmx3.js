@@ -9,6 +9,9 @@ var hongbaoid = ["Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYX
 "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjYzNjMiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoibGNfdHQifSwiYXVkIjoiYXBwYXBpLm1tIiwiZXhwIjoxNjI4MzM1MDk5LCJpYXQiOjE2Mjc3MzAyOTksImlzcyI6ImF1dGgtYXBwYXBpLm1tIn0.sk6eyG2aWFuvdGeXkMIIrd4D35zQhJ4iKrYWFEfZyHw",
 "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs"]
 async function test(){
+    //红包储钱罐
+    hongbaochuqianguan()
+    await sleep(3000)
     //转盘红包
     for(var i = 1; i < 99; i++){
         console.log("开始第"+i+"次收取：")
@@ -304,3 +307,61 @@ console.log("红包余额：" + json.data.user.point)
 
 })
     }
+
+function hongbaochuqianguan(){
+
+ 
+const url = "https://api-aas-mm.luckylist.cn/api/v2/coinbox/takeout";
+var method = `POST`;
+var headers = {
+    "Accept-Encoding": "identity",
+    "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjY0ODYiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoibGNfdHQifSwiYXVkIjoiYXBwYXBpLm1tIiwiZXhwIjoxNjI4MzIyMjA1LCJpYXQiOjE2Mjc3MTc0MDUsImlzcyI6ImF1dGgtYXBwYXBpLm1tIn0.RuuaF8tb3dhaoHDtvawMB_KAO8i5grro_OmcLHnB_yE",
+    "x-lng": "",
+    "x-device-name": "PCAM10",
+    "x-rom-name": "oppo",
+    "x-app": "answerking",
+    "x-screen-size": "1080*2340",
+    "x-os-version": "10",
+    "x-imei": "",
+    "x-pkg": "net.tanggua.answerstar",
+    "x-app-id": "aas202100008266",
+    "Access-Control-Allow-Origin": "*",
+    "x-lat": "",
+    "x-city-code": "",
+    "Content-Type": "application/json",
+    "x-oaid": "1CF53215846842DC862E6ED6D54FA24Bee79c064503e704efaf511a1a9014ed8",
+    "x-app-version": "2.4.2",
+    "x-imei-sub": "",
+    "x-device-id": "4cc822d26061f7ce",
+    "x-network": "1",
+    "x-sc": "lc_tt",
+    "x-sc2": "0003310001",
+    "Access-Control-Allow-Headers": "x-requested-with,content-type,authorization",
+    "x-device-model": "OPPO",
+    "Access-Control-Allow-Methods": "GET, POST",
+    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; PCAM10 Build/QP1A.190711.020)",
+    "Host": "api-aas-mm.luckylist.cn",
+    "Connection": "Keep-Alive",
+    "Content-Length": "2"
+};
+var body = "";
+var myurl = {
+    method: method,
+    headers: headers,
+    body: body
+};
+
+fetch(url,myurl)
+.then(res =>
+    res.json()
+    )
+.then(function(json) {
+   result = json
+   if(json.data == null){
+        console.log(json.msg)
+   }else {
+        console.log("红包储钱罐共收取" + json.data.reward_amount)
+   }
+    
+})
+}

@@ -67,7 +67,7 @@ const url = "https://api-aas-mm.luckylist.cn/api/v2/answer/task/reward";
 var method = `POST`;
 var headers = {
     "Accept-Encoding": "identity",
-    "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs"，
+    "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs",
     "x-lng": "",
     "x-device-name": "PCAM10",
     "x-rom-name": "oppo",
@@ -132,8 +132,8 @@ fetch(url,myurl).then(res=>{
     var method = `POST`;
     var headers = {
         "Accept-Encoding": "identity",
-        "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs"，
-        "x-lng": "",
+           "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs",
+            "x-lng": "",
         "x-device-name": "PCAM10",
         "x-rom-name": "oppo",
         "x-app": "answerking",
@@ -199,8 +199,8 @@ const url = "https://api-aas-mm.luckylist.cn/api/v2/user/cashout/apply";
 var method = `POST`;
 var headers = {
     "Accept-Encoding": "identity",
-    "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs"，
-  
+       "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs",
+
     "x-lng": "",
     "x-device-name": "PCAM10",
     "x-rom-name": "oppo",
@@ -256,8 +256,8 @@ const url = "https://api-aas-mm.luckylist.cn/api/v2/user/cashout/status";
 var method = `POST`;
 var headers = {
     "Accept-Encoding": "identity",
-    "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs"，
-  
+        "x-token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjUwNjIiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoiMDAwMzMxMDAwMSJ9LCJhdWQiOiJhcHBhcGkubW0iLCJleHAiOjE2MjgzMTM1ODYsImlhdCI6MTYyNzcwODc4NiwiaXNzIjoiYXV0aC1hcHBhcGkubW0ifQ.r699vvDHMqbi360jIAz92Jekxt7UF73_wyEwbSIfaYs",
+
     "x-lng": "",
     "x-device-name": "PCAM10",
     "x-rom-name": "oppo",

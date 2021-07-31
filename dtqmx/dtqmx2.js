@@ -1,4 +1,4 @@
-#清风
+//清风
 var fetch = require('node-fetch');
 var hongbao = 0
 var goon = true

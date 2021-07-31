@@ -2,7 +2,10 @@ var fetch = require('node-fetch');
 var hongbao = 0
 var goon = true
 var hongbao = 0 //红包余额
+var tixiancishu = 0 //提现次数
+
 test()  //抽奖5次
+
 // tixian()
 
 var hongbaoid = ["Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYXBwYXBpIiwiYXBwSWQiOiJhYXMyMDIxMDAwMDgyNjYiLCJ1aWQiOiI2NjAyNjY0ODYiLCJwYXlsb2FkIjp7ImFwcF92ZXJzaW9uIjoiMi40LjIiLCJpcCI6IjE4My4yMjYuMTAxLjE5IiwibGF0TG5nIjoiIiwic2MyIjoibGNfdHQifSwiYXVkIjoiYXBwYXBpLm1tIiwiZXhwIjoxNjI4MzIyMjA1LCJpYXQiOjE2Mjc3MTc0MDUsImlzcyI6ImF1dGgtYXBwYXBpLm1tIn0.RuuaF8tb3dhaoHDtvawMB_KAO8i5grro_OmcLHnB_yE",

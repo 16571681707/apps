@@ -49,11 +49,11 @@ async function test(){
     await sleep(3000)
     hongbaoyue()
     await sleep(3000)
-    while(hongbao > 300000) {
-        tixian()
-        await sleep(3000)
-        hongbaoyue()
-    }
+//     while(hongbao > 300000) {
+//         tixian()
+//         await sleep(3000)
+//         hongbaoyue()
+//     }
 }
 
 

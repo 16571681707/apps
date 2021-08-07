@@ -53,14 +53,14 @@ async function test(){
     await sleep(3000)
     hongbaoyue()
     await sleep(3000)
-    while(hongbao > 3000) {
-        tixiancishu = tixiancishu + 1
-        console.log("开始第"+ tixiancishu + "提现")
-        tixian()
-        await sleep(8000)
-        console.log("\n")
-        hongbaoyue()
-    }
+//     while(hongbao > 3000) {
+//         tixiancishu = tixiancishu + 1
+//         console.log("开始第"+ tixiancishu + "提现")
+//         tixian()
+//         await sleep(8000)
+//         console.log("\n")
+//         hongbaoyue()
+//     }
 }
 
 
